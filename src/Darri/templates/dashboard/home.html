@@ -1,0 +1,59 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="{% static 'css/main.css' %}"/>
+    </head>
+    <body>
+        <div class="b-c">
+        <div class="home">
+            <div class="home-logo">ASTRID</div>
+            <div class="nav-bar">
+                <ul>
+                    <li>
+                        <a>Home</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'chatbot' %}">Services</a>
+                    </li>
+                    <li>
+                        <a>About Us</a>
+                    </li>
+                    <li>
+                        <a>Blog</a>
+                    </li>
+                    <li>
+                       <div class="contact"><a>Contact Us</a></div>
+                    </li>
+                    <li>
+                       <div class="home-profile"><a><img src="{% static 'Images/Group.png' %}" alt=""></a>
+                       <p>Profile</p>
+                    </div>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="content">
+            <div class="c-ls">
+           <div class="c-offer">We Offer</div>
+           <div class="rm">The best remedies you can find online</div>
+           <div class="c-des">A remedy chatbot offering top virtual health solutions. 
+            It provides quick, reliable online advice for various symptoms,
+             guiding you through effective treatments from the comfort of your home. 
+            Accessible and user-friendly, it's your go-to digital health companion.</div>
+            </div>
+            <div class="c-rs">
+<div class="circle-img"><img src="{% static 'Images/Group 7.png' %}" alt=""></div>
+            </div>
+
+        </div>
+    </div>
+    <div class="waves"><img src="{% static 'Images/Vector 1.png' %}" alt=""></div>
+    </body>
+    <footer>
+        <div>Privacy Policy and Terms of Service</div>
+        <div>© 2024 ASTRID. All rights reserved.</div>
+    </footer>
+    </html>

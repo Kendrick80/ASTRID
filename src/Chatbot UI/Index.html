@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot UI</title>
+    <link rel="stylesheet" href="styled.css">
+</head>
+<body>
+    <div class="chatbot-icon" id="chatbotIcon">&#128172;</div>
+
+    <div class="chat-popup" id="chatPopup">
+
+        <div class="chat-body" id="chatBody">
+            <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+            <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+            <df-messenger
+              location="us-central1"
+              project-id="refined-algebra-426307-v8"
+              agent-id="714371b3-3f16-499c-9465-aa5525ad9ff3"
+              language-code="en"
+              max-query-length="-1">
+              <df-messenger-chat
+               chat-title="ASTRID">
+              </df-messenger-chat>
+            </df-messenger>
+            <style>
+              df-messenger {
+                z-index: 999;
+                position: fixed;
+                --df-messenger-font-color: #000;
+                --df-messenger-font-family: Google Sans;
+                --df-messenger-chat-background: #f3f6fc;
+                --df-messenger-message-user-background: #d3e3fd;
+                --df-messenger-message-bot-background: #fff;
+                bottom: 0;
+                right: 0;
+                top: 0;
+                width: 500px;
+              }
+            </style>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

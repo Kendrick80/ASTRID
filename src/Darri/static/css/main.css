@@ -1,0 +1,183 @@
+*{
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+}
+
+body{
+  background-color: F8F8F8;
+}
+
+.home{
+  display: flex;
+  gap:500px;
+  width: 100%;
+  padding:10px;
+  padding-inline: 50px;
+}
+
+.home-logo{
+  font-family: "IM Fell DW Pica SC", serif;
+  font-weight: 400;
+  font-size: 60px;
+  color: #2f388c;
+}
+
+.nav-bar>ul>li{
+  list-style-type: none;
+  font-family: "Arimo",sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.nav-bar>ul{
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  padding:20px;
+}
+
+.nav-bar>ul>li:hover {
+  color: #f2f2f2; /* Change color on hover */
+}
+
+.nav-bar>ul>li>a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.nav-bar>ul>li>a:hover {
+  text-decoration: underline;
+}
+
+.nav-bar{
+  font-size: 16px;
+}
+
+.circle-img > img {
+  width: 100%;
+  max-width: 470px;
+  height: auto;
+}
+
+footer {
+  width: 100%;
+  color: #fff;
+  background-color: #2f388c;
+  height: 47px;
+  display: flex;
+  justify-content:flex-start; /* Distributes space evenly */
+  align-items: center;
+  padding-inline-start: 20px;
+  font-family: 'Arimo', sans-serif;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  gap: 400px;
+}
+
+.content{
+  width: 100%;
+  padding-inline: 30px;
+  margin-top: 0px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 30px;
+  gap: 0px;
+  padding-inline: 50px;
+}
+
+.c-ls{
+  width: 50%;
+}
+
+.c-rs{
+  width: 40%;
+}
+
+.c-offer{
+  font-family: 'Arimo',sans-serif;
+  background-color: #2f388c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 70px;
+  color: #f2f2f2;
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 50px;
+  margin-top: 50px;
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.c-offer:hover {
+  background-color: #1a237e; /* Darker shade on hover */
+}
+
+.rm{
+  padding-top: 30px;
+  font-family: 'Arimo',sans-serif;
+  font-size: 30px;
+  width: 50%;
+  font-weight: 700;
+}
+
+.c-des{
+  margin-top: 40px;
+  font-family: 'Arimo',sans-serif;
+  width: 70%;
+  font-size: 25px;
+  line-height: 40px;
+}
+
+.waves{
+  width: 90%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.contact{
+  color: #fff;
+  background-color: #2f388c;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  width: 230px;
+  align-items: center;
+  border-radius: 10px;
+  margin-top: -18px;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.contact:hover {
+  background-color: #1a237e; /* Darker shade on hover */
+}
+
+.home-profile>a>img{
+ margin-top: -25px;
+ width: 40px;
+ height:40px;
+ margin-left: 50px;
+ cursor: pointer;
+}
+
+.home-profile>p{
+ margin-top: -1px;
+ width: 40px;
+ height:40px;
+ margin-left: 47px;
+}
+
+.home-profile{
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}

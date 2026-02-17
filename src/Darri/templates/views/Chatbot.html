@@ -1,0 +1,151 @@
+
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/styled.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/chatbot.css' %}"/>
+    <title>Document</title>
+</head>
+<body>
+  <div class="home">
+    <div class="home-logo">ASTRID</div>
+    <div class="nav-bar">
+        <ul>
+            <li>
+                <a>Home</a>
+            </li>
+            <li>
+                <a href="{% url 'chatbot' %}">Services</a>
+            </li>
+            <li>
+                <a>About Us</a>
+            </li>
+            <li>
+                <a>Blog</a>
+            </li>
+            <li>
+               <div class="contact"><a>Contact Us</a></div>
+            </li>
+            <li>
+               <div class="home-profile"><a><img src="{% static 'Images/Group.png' %}" alt=""></a>
+               <p>Profile</p>
+            </div>
+            </li>
+        </ul>
+
+    </div>
+</div>
+<div class="chatbot-content">
+  <div class="brain">
+    <img src="{% static 'Images/deep-learning-machine-learning-artificial-neural-network-brain-artificial-intelligence-brain-c54b0b6b227ba075be506e6eb9b3f8b6_5.png'%}" alt="">
+  </div>
+  <div class="heart">
+    <img src="{% static 'Images/medicine-health-care-logo-health-8450ef66c84f265639fbf863ced7a6c0_1.png'%}" alt="">
+  </div>
+   
+</div>
+<div class="chatbot-icon" id="chatbotIcon">&#128172;</div>
+
+<div class="chat-popup" id="chatPopup">
+
+    <div class="chat-body" id="chatBody">
+        <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+        <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+        <df-messenger
+          location="us-central1"
+          project-id="refined-algebra-426307-v8"
+          agent-id="714371b3-3f16-499c-9465-aa5525ad9ff3"
+          language-code="en"
+          storage-option="none"
+          max-query-length="-1">
+          <df-messenger-chat
+           chat-title="ASTRID">
+          </df-messenger-chat>
+        </df-messenger>
+        <style>
+          df-messenger {
+            z-index: 999;
+            position: fixed;
+            --df-messenger-font-color: #000;
+            --df-messenger-font-family: Google Sans;
+            --df-messenger-chat-background: #f3f6fc;
+            --df-messenger-message-user-background: #d3e3fd;
+            --df-messenger-message-bot-background: #fff;
+            bottom: 0;
+            right: 0;
+            top: 0;
+            width: 500px;
+          }
+        </style>
+    </div>
+</div>
+
+<script>
+  document.getElementById('chatbotIcon').addEventListener('click', function() {
+    const chatPopup = document.getElementById('chatPopup');
+    const chatbotIcon = document.getElementById('chatbotIcon');
+
+    if (chatPopup.classList.contains('visible')) {
+        chatPopup.classList.remove('visible');
+        setTimeout(() => {
+            chatPopup.style.display = 'none';
+            chatbotIcon.innerHTML = '&#128172;'; // Message icon
+            chatbotIcon.classList.remove('rotated');
+        }, 300); // Wait for the opacity transition
+    } else {
+        chatPopup.style.display = 'flex';
+        setTimeout(() => chatPopup.classList.add('visible'), 10);
+        chatbotIcon.innerHTML = '&times;'; // X icon
+        chatbotIcon.classList.add('rotated');
+    }
+});
+
+document.getElementById('sendBtn').addEventListener('click', function() {
+    const userInput = document.getElementById('userInput').value;
+    if (userInput) {
+        const messageDiv = document.createElement('div');
+        messageDiv.textContent = userInput;
+        document.getElementById('chatBody').appendChild(messageDiv);
+        document.getElementById('userInput').value = '';
+    }
+});
+
+</script>
+</body>
+<footer>
+  <div>Privacy Policy and Terms of Service</div>
+  <div>© 2024 ASTRID. All rights reserved.</div>
+</footer>
+</html>
+
+{% comment %} <p>..............Hi..........</p>
+<link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+<script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+<df-messenger
+location="us-central1"
+project-id="refined-algebra-426307-v8"
+agent-id="714371b3-3f16-499c-9465-aa5525ad9ff3"
+language-code="en"
+storage-option="none"
+max-query-length="-1">
+<df-messenger-chat-bubble
+chat-title="ASTRID">
+</df-messenger-chat-bubble>
+</df-messenger>
+<style>
+df-messenger {
+z-index: 999;
+position: fixed;
+--df-messenger-font-color: #000;
+--df-messenger-font-family: Google Sans;
+--df-messenger-chat-background: #f3f6fc;
+--df-messenger-message-user-background: #d3e3fd;
+--df-messenger-message-bot-background: #fff;
+bottom: 16px;
+right: 16px;
+}
+</style> {% endcomment %}

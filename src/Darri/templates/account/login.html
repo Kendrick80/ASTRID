@@ -1,0 +1,118 @@
+{%load static %}
+{% load i18n %}
+{% load allauth account %}
+{% load account socialaccount %}
+{% load crispy_forms_tags %}
+{% get_providers as socialaccount_providers %}
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block head_title %}
+        {% endblock head_title %}
+    </title>
+    {% block extra_head %}
+    {% endblock extra_head %}
+<link rel="stylesheet" href="{% static 'css/styles.css' %}"/>
+</head>
+{%block content%}
+<div class="lg-body">
+    <div class="l-s">
+      <h1>Sign In</h1>
+      <div class="Social">
+      {% get_providers as socialaccount_providers %}
+
+      {% if socialaccount_providers %}
+    
+  
+      <div class="socialaccount_ballot">
+  
+        <div class="socialaccount_providers">
+          {% include "socialaccount/snippets/provider_list.html" with process="login" %}
+        </div> 
+      </div>
+  
+      {% include "socialaccount/snippets/login_extra.html" %}
+  
+      {% else %}
+      {% endif %}
+      <p class="p-r">Or use email and password</p>
+      </div>
+      <div>
+        <div class="lg-f">
+            {% element form form=form method="post" action=login_url tags="entrance,login" %}
+            {% slot body %}
+                {% csrf_token %}
+                {% element fields form=form unlabeled=False %}
+                {% endelement %}
+                {% if redirect_field_value %}
+                    <input type="hidden"
+                           name="{{ redirect_field_name }}"
+                           value="{{ redirect_field_value }}" />
+                {% endif %}
+            {% endslot %}
+            {% slot actions %}
+                {% element button type="submit" tags="prominent,login" %}
+                    {% trans "SIGN IN" %}
+                {% endelement %}
+            {% endslot %}
+        {% endelement %}
+        </div>
+        
+      </div>
+    </div>
+    <div class="r-s">
+        <h1>Hello and Welcome</h1>
+        <p>Sign up for personalized health recommendations</p>
+        <button class="btn"><a href="{{ signup_url }}">SIGN UP</a></button>
+    </div>
+</div>
+{%endblock%}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- {% comment %} {% block head_title %}
+    {% trans "Sign In" %}
+{% endblock head_title %}
+{% block content %}
+    {% element h1 %}
+        {% trans "Sign In" %}
+    {% endelement %}
+    <p>
+        {% blocktrans %}If you have not created an account yet, then please
+    <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}
+    </p>
+    {% url 'account_login' as login_url %}
+    {% element form form=form method="post" action=login_url tags="entrance,login" %}
+        {% slot body %}
+            {% csrf_token %}
+            {% element fields form=form unlabeled=True %}
+            {% endelement %}
+            {% if redirect_field_value %}
+                <input type="hidden"
+                       name="{{ redirect_field_name }}"
+                       value="{{ redirect_field_value }}" />
+            {% endif %}
+        {% endslot %}
+        {% slot actions %}
+            {% element button type="submit" tags="prominent,login" %}
+                {% trans "Sign In" %}
+            {% endelement %}
+        {% endslot %}
+    {% endelement %}
+    {% if SOCIALACCOUNT_ENABLED %}
+        {% include "socialaccount/snippets/login.html" with page_layout="entrance" %}
+    {% endif %}
+{% endblock content %} {% endcomment %} -->

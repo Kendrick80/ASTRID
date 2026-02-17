@@ -1,0 +1,33 @@
+node_modules/
+package-lock.json
+
+# Python virtual environments
+.venv/
+venv/
+env/
+
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django
+db.sqlite3
+media/
+
+# Node
+node_modules/
+npm-debug.log
+
+# Editor directories and files
+.vscode/
+.idea/
+
+# Ignore service account or secret files
+*.json
+*.pem
+*.key
+service_account.json
+
+# Ignore OS files
+.DS_Store

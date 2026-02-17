@@ -1,0 +1,189 @@
+body{
+    background: white;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+  
+}
+
+.lg-body{
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 100%;
+}
+.l-s{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Inter",sans-serif;
+    font-size: bold;
+    color: rgb(6, 6, 6);
+    font-size: 30px;
+    justify-content: flex-start;
+    
+}
+.r-s{
+    background-color: #2f388c;
+    width: 50%;
+    height: 100%;
+    border-radius: 200px 0px 0px 200px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Inter",sans-serif;
+    font-size: bold;
+    color: white;
+    font-size: 30px;
+     justify-content: center;
+}
+.btn{
+    border-color: white;
+    border: 1px solid;
+    width: 250px;
+    height: 60px;
+    background-color: transparent;
+    color: white;
+    border-radius: 15px;
+    padding-left: 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.r-s > button > a {
+    text-decoration: none;
+    color: white;           
+}
+
+a{
+    text-decoration: none;
+}
+
+.social-login-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;  /* Aligns items to the start of the container */
+    width: 100%;  /* Ensure it takes up the full width of the container */
+    padding: 0;  /* Remove any padding */
+    list-style-type: none;
+    flex-direction: row;  /* Remove bullets */
+    gap: 30px;
+}
+
+.social-login-row {
+    margin-bottom: 10px;
+    flex-direction: row;  /* Space between each row */
+}
+
+.social-login-row a {
+    text-decoration: none;  /* Remove underline from links */
+    color: #000;  /* Set the text color (adjust as needed) */
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    flex-direction: row;  /* Adjust font size if necessary */
+}
+
+.social-login-row img {
+    margin-right: 10px;  /* Space between the image and text */
+}
+
+.social-login-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+    padding: 0;
+  
+}
+
+.social-login-row {
+    margin-bottom: 10px;
+}
+
+.social-login-row a {
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    row-gap: 70px;
+    
+}
+
+.social-login-row img {
+    margin-right: 10px;
+}
+
+.p-r{
+    font-size: 30px;
+    color: 8C8282;
+}
+
+.form-with-validation{
+    width:500px;
+}
+.lg-f{
+    margin-top: -45px;
+}
+form>input{
+    width: 100%;
+}
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #abaaaa;
+    border-radius: 4px;
+    background-color: #f2f2f2;
+    font-size: 16px;
+    height: 50px;
+}
+
+input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #abaaaa;
+    border-radius: 4px;
+    background-color: #f2f2f2;
+    font-size: 16px;
+    height: 50px;
+
+}
+input[type="email"], input[type="password"]:focus {
+outline: #ccc;
+border: none;
+}
+/* Style for the submit button */
+button[type="submit"] {
+    width: 32%;
+    background-color: #2f388c;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 180px;
+    height: 55px;
+    font-size: 20px;
+    margin-top: -50px;
+    font-weight: bold;
+    border-radius: 15px;
+}
+
+/* Change button color on hover */
+button[type="submit"]:hover {
+    background-color:  #2f388c;
+}
+
+label {
+    font-size: 16px;
+   color: #2f388c;
+}
